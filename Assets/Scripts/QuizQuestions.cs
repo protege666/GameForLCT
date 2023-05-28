@@ -36,6 +36,7 @@ public GameObject panel;
    int randQ;
    int Number;
    int NumberRegion;
+   int kol;  // накопитель правильных ответов
 
 // public void NoCharges()
 // {
@@ -127,7 +128,11 @@ public GameObject panel;
                anim.SetTrigger("Begin");
                ButtonActive();
                SheetPriceImg[NumberRegion].SetActive(true);
+               // kol+=1;
+               // if (kol == 8)
+               // {
 
+               // } 
           }
           else 
           {
