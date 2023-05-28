@@ -20,6 +20,7 @@ public class QuizQuestions : Switch
    public Animator anim;  
    public Animator pqAnimator; 
    public Animator battery;
+   public GameObject[] SheetPriceImg = new GameObject[8];
    
 //    public Image newTer;
 //    public Button newTerrBtn;
@@ -125,6 +126,7 @@ public GameObject panel;
                // newTer.color = newColor;
                anim.SetTrigger("Begin");
                ButtonActive();
+               SheetPriceImg[NumberRegion].SetActive(true);
 
           }
           else 
