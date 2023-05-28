@@ -32,11 +32,14 @@ public class QuizQuestions : Switch
 public Animator animBlack;
 public GameObject blackPanel;
 public GameObject panel;
+
+
+public GameObject winPanel; 
 //----------------------------------------
    int randQ;
    int Number;
    int NumberRegion;
-   int kol;  // накопитель правильных ответов
+   int kol = 0;  // накопитель правильных ответов
 
 // public void NoCharges()
 // {
@@ -59,6 +62,17 @@ public GameObject panel;
           blackPanel.SetActive(true);
           //panel.SetActive(true);
           pqAnimator.SetTrigger("GameOver");
+         // animBlack.SetTrigger("On");
+
+          
+     }
+
+     public void OnPlanshetWin()
+     {
+          winPanel.SetActive(true);
+          //panel.SetActive(true);
+          panel.SetActive(true);
+          animBlack.Play("PanelOff");
          // animBlack.SetTrigger("On");
 
           
@@ -118,16 +132,21 @@ public GameObject panel;
    {
           if (check)
           {
+               kol+=1;
                TFIcon.sprite = TFIcons[0];
                TFText.text = "Правильно. Ты молодец! Делай фотографию.";
                PriceImg.sprite = ListPriceImg[NumberRegion];
                CloseRegionDistrict();
-               // newTerrBtn.interactable = true;
-               // Color newColor = new Color(255 / 255f, 255 / 255f, 255 / 255f);
-               // newTer.color = newColor;
+               if(kol == 8)
+               {
+                    OnPlanshetWin();
+               }
+               else{
+
                anim.SetTrigger("Begin");
                ButtonActive();
                SheetPriceImg[NumberRegion].SetActive(true);
+               }
                // kol+=1;
                // if (kol == 8)
                // {
