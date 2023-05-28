@@ -107,7 +107,7 @@ public GameObject panel;
           if (check)
           {
                TFIcon.sprite = TFIcons[0];
-               TFText.text = "Правильный ответ";
+               TFText.text = "Правильный ответ. Ты справились на отлично! Можешь сделать фотографию.";
                PriceImg.sprite = ListPriceImg[NumberRegion];
                CloseRegionDistrict();
                // newTerrBtn.interactable = true;
@@ -119,7 +119,7 @@ public GameObject panel;
           else 
           {
                TFIcon.sprite = TFIcons[1];
-               TFText.text = "Неправильный ответ";
+               TFText.text = "Неправильный ответ. Ну ничего может в другом районе, ты ответишь лучше.";
                if (sumcharges > 0)
                {
                sumcharges --;
