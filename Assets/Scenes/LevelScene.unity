@@ -5614,8 +5614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 0.000030518}
-  m_SizeDelta: {x: 232.45, y: 232.45}
+  m_AnchoredPosition: {x: -22.36, y: -0.000005722}
+  m_SizeDelta: {x: 270.14, y: 270.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399766151
 MonoBehaviour:
@@ -5637,7 +5637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b8cb49e43ce2ba4895307605cd30ffa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 566613c67f8ff3d4bb9ea0d00a1e81b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5664,6 +5664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410419461}
+  - component: {fileID: 1410419465}
   - component: {fileID: 1410419462}
   - component: {fileID: 1410419463}
   - component: {fileID: 1410419464}
@@ -5840,6 +5841,20 @@ MonoBehaviour:
   panel: {fileID: 1688514774}
   backButton: {fileID: 599275041}
   panelButton: {fileID: 747635426}
+--- !u!114 &1410419465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410419460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c785293102d97428e68d10d033d1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pq: {fileID: 1410419460}
+  Db: {fileID: 0}
 --- !u!1 &1413470234
 GameObject:
   m_ObjectHideFlags: 0
