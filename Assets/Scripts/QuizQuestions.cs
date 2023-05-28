@@ -55,6 +55,9 @@ public GameObject panel;
           
      }
 
+     public void ButtonActive(){
+          animBlack.SetTrigger("OnButton");
+     }
 
 
    private void Awake()
@@ -114,6 +117,7 @@ public GameObject panel;
                // Color newColor = new Color(255 / 255f, 255 / 255f, 255 / 255f);
                // newTer.color = newColor;
                anim.SetTrigger("Begin");
+               ButtonActive();
 
           }
           else 
