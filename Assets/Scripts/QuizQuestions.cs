@@ -46,9 +46,16 @@ public GameObject panel;
 //      animBlack.Play("NoBattery");
 // }
 
+
+
+   public void vkl(){
+     panel.SetActive(true);
+     animBlack.SetTrigger("PanelOff");
+   }
      public void OnPlanshet()
      {
           blackPanel.SetActive(true);
+          //panel.SetActive(true);
           pqAnimator.SetTrigger("GameOver");
          // animBlack.SetTrigger("On");
 
@@ -124,9 +131,11 @@ public GameObject panel;
           {
                TFIcon.sprite = TFIcons[1];
                TFText.text = "Неправильно. Ну ничего, ты сможешь ответить лучше.";
+               ButtonActive();
                if (sumcharges > 0)
                {
-               sumcharges --;
+               //sumcharges -=4;
+               sumcharges-- ;
                charges[sumcharges].enabled = false;
                     if(sumcharges == 0){
                          OnPlanshet();
