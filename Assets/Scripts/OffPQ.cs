@@ -7,6 +7,8 @@ public class OffPQ : MonoBehaviour
 {
     public GameObject pq;
     public GameObject Db;
+    public Animator panel;
+    public GameObject panel2;
 
     public void offP(){
         pq.SetActive(false);
@@ -14,5 +16,10 @@ public class OffPQ : MonoBehaviour
     }
     public void ssss(){
             Db.SetActive(true);
+    }
+
+    public void blackout(){
+       panel2.SetActive(true);
+        panel.SetTrigger("vkl");
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizQuestions : Switch
 {
@@ -128,6 +129,10 @@ public GameObject winPanel;
         }
    }
 
+     public void WinGame(){
+               SceneManager.LoadScene(4);
+     }
+
    public void TrueOrFalse(bool check)
    {
           if (check)
@@ -137,12 +142,10 @@ public GameObject winPanel;
                TFText.text = "Правильно. Ты молодец! Делай фотографию.";
                PriceImg.sprite = ListPriceImg[NumberRegion];
                CloseRegionDistrict();
-               if(kol == 8)
-               {
-                    OnPlanshetWin();
+               if(kol == 8){
+                    anim.SetTrigger("WinGame");
                }
                else{
-
                anim.SetTrigger("Begin");
                ButtonActive();
                SheetPriceImg[NumberRegion].SetActive(true);
