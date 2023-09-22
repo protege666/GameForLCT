@@ -10,6 +10,7 @@ public class DialogForTutorial : MonoBehaviour
     public float speedText;
     public Text dialogText;
     public GameObject[] _gameObj;
+    public GameObject _panelOn;
     
 
     private int index;
@@ -49,10 +50,10 @@ public class DialogForTutorial : MonoBehaviour
             }
             else
             {
-                OnClickNewScene();
+                _panelOn.SetActive(true);
             }
             NextLines();
-            Debug.Log(countIcon);
+            
         }
         else
         {

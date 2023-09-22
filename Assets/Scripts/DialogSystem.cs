@@ -9,8 +9,11 @@ public class DialogSystem : MonoBehaviour
     public float speedText;
     public Text dialogText;
     public Text nameText;
+    public GameObject _panelOut;
 
     private int index;
+    private bool _checkTLM = false;
+
     void Start()
     {
         dialogText.text = string.Empty;
@@ -33,14 +36,19 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText()
     {
-        if(dialogText.text == lines[index])
+        
+        if (_checkTLM == true)
         {
-            NextLines();
-        }
-        else
-        {
-            StopAllCoroutines();
-            dialogText.text = lines[index];
+            if (dialogText.text == lines[index])
+            {
+                NextLines();
+                NameChange();
+            }
+            else
+            {
+                StopAllCoroutines();
+                dialogText.text = lines[index];
+            }
         }
     }
 
@@ -56,6 +64,7 @@ public class DialogSystem : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            _panelOut.SetActive(true);
         }
     }
 
@@ -71,4 +80,10 @@ public class DialogSystem : MonoBehaviour
             nameText.text = "Макс";
         }
     }
+
+    public void CheckTLM()
+    {
+        _checkTLM = true;
+    }
+
 }
