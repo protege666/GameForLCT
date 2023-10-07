@@ -23,6 +23,7 @@ public class QuizQuestions : Switch
    public Animator battery;
    public GameObject[] SheetPriceImg = new GameObject[8];
     public GameObject _photoCamera;
+    
    
 //    public Image newTer;
 //    public Button newTerrBtn;
@@ -138,6 +139,7 @@ public GameObject winPanel;
    {
           if (check)
           {
+            ButtonNoInteractive();
             _photoCamera.SetActive(true);
                kol+=1;
                TFIcon.sprite = TFIcons[0];
@@ -160,6 +162,7 @@ public GameObject winPanel;
           }
           else 
           {
+            ButtonNoInteractive();
                TFIcon.sprite = TFIcons[1];
                TFText.text = "Неправильно. Ну ничего, ты сможешь ответить лучше.";
                ButtonActive();
@@ -199,6 +202,22 @@ public GameObject winPanel;
     public void PhotoCameraOff()
     {
         _photoCamera.SetActive(false);
+    }
+
+    public void ButtonNoInteractive()
+    {
+        for(int i = 0; i < answerBttns.Length; i++)
+        {
+            answerBttns[i].interactable = false;
+        }
+    }
+
+    public void ButtonYesInteractive()
+    {
+        for (int i = 0; i < answerBttns.Length; i++)
+        {
+            answerBttns[i].interactable = true;
+        }
     }
 }
 
