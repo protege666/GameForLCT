@@ -22,6 +22,7 @@ public class QuizQuestions : Switch
    public Animator pqAnimator; 
    public Animator battery;
    public GameObject[] SheetPriceImg = new GameObject[8];
+    public GameObject _photoCamera;
    
 //    public Image newTer;
 //    public Button newTerrBtn;
@@ -137,6 +138,7 @@ public GameObject winPanel;
    {
           if (check)
           {
+            _photoCamera.SetActive(true);
                kol+=1;
                TFIcon.sprite = TFIcons[0];
                TFText.text = "Правильно. Ты молодец! Делай фотографию.";
@@ -194,6 +196,10 @@ public GameObject winPanel;
           
           //DeviceBttn.SetActive(true);
      }
+    public void PhotoCameraOff()
+    {
+        _photoCamera.SetActive(false);
+    }
 }
 
 [System.Serializable]
@@ -202,3 +208,4 @@ public class QuestionsList
     public string question;
     public string[] answers = new string[4];
 }
+

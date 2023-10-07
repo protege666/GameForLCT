@@ -11,6 +11,7 @@ public class DialogForTutorial : MonoBehaviour
     public Text dialogText;
     public GameObject[] _gameObj;
     public GameObject _panelOn;
+    public GameObject _skipButton;
     
 
     private int index;
@@ -50,6 +51,7 @@ public class DialogForTutorial : MonoBehaviour
             }
             else
             {
+                _skipButton.SetActive(false);
                 _panelOn.SetActive(true);
             }
             NextLines();

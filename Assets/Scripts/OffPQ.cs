@@ -22,4 +22,8 @@ public class OffPQ : MonoBehaviour
        panel2.SetActive(true);
         panel.SetTrigger("vkl");
     }
+    public void PhotoCameraOff()
+    {
+        gameObject.SetActive(false);
+    }
 }
